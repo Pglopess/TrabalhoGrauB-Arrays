@@ -1,0 +1,408 @@
+package trabalhoGrauBB;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Random;
+
+public class GeradorDeArrays {
+
+    /**
+     * Método principal que gera arrays de diferentes tipos e tamanhos,
+     * testa vários algoritmos de ordenação e imprime os resultados.
+     */
+    public static void main(String[] args) {
+        // Tamanhos dos arrays a serem testados
+        int[] tamanhos = {128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536};
+
+        // Itera sobre cada tamanho de array
+        for (int tamanho : tamanhos) {
+            System.out.println("Tamanho do array: " + tamanho);
+
+            // Gera arrays de diferentes tipos
+            int[] arrayCrescente = gerarArrayCrescente(tamanho);
+            int[] arrayDecrescente = gerarArrayDecrescente(tamanho);
+            int[] arrayAleatorioSemRepetidos = gerarArrayAleatorioSemRepetidos(tamanho);
+            int[] arrayAleatorioComRepetidos = gerarArrayAleatorioComRepetidos(tamanho);
+
+            // Testa os algoritmos de ordenação para cada tipo de array gerado
+            testarAlgoritmos("Crescente", arrayCrescente);
+            testarAlgoritmos("Decrescente", arrayDecrescente);
+            testarAlgoritmos("Aleatório Sem Repetidos", arrayAleatorioSemRepetidos);
+            testarAlgoritmos("Aleatório Com Repetidos", arrayAleatorioComRepetidos);
+
+            System.out.println(); // Linha em branco para separar cada conjunto de arrays
+        }
+    }
+
+    /**
+     * Testa os algoritmos de ordenação em um array e imprime os resultados.
+     *  tipo Tipo do array (Crescente, Decrescente, Aleatório Sem Repetidos, Aleatório Com Repetidos)
+     *  arrayOriginal Array a ser ordenado
+     */
+    public static void testarAlgoritmos(String tipo, int[] arrayOriginal) {
+        System.out.println("Tipo de array: " + tipo);
+
+        // Métodos de ordenação a serem testados
+        String[] algoritmos = {
+            "bubbleSort", "insertionSort", "selectionSort", "heapSort", 
+            "shellSort", "mergeSort", "quickSort"
+        };
+
+        // Itera sobre cada algoritmo de ordenação
+        for (String algoritmo : algoritmos) {
+            long[] tempos = new long[10]; // Array para armazenar os tempos de execução
+
+            // Executa o algoritmo 10 vezes e mede o tempo de execução
+            for (int i = 0; i < 10; i++) {
+                int[] array = Arrays.copyOf(arrayOriginal, arrayOriginal.length); // Copia o array original
+                long inicio = System.nanoTime();
+                switch (algoritmo) {
+                    case "bubbleSort":
+                        bubbleSort(array);
+                        break;
+                    case "insertionSort":
+                        insertionSort(array);
+                        break;
+                    case "selectionSort":
+                        selectionSort(array);
+                        break;
+                    case "heapSort":
+                        heapSort(array);
+                        break;
+                    case "shellSort":
+                        shellSort(array);
+                        break;
+                    case "mergeSort":
+                        mergeSort(array);
+                        break;
+                    case "quickSort":
+                        quickSort(array, 0, array.length - 1);
+                        break;
+                    default:
+                        System.out.println("Algoritmo não reconhecido");
+                        break;
+                }
+                long fim = System.nanoTime();
+                tempos[i] = fim - inicio; // Calcula o tempo de execução e armazena no array
+            }
+
+            // Imprime os resultados para o algoritmo atual
+            System.out.println("Algoritmo: " + algoritmo);
+            System.out.println("Tempos das 10 execuções (em nanossegundos): " + Arrays.toString(tempos));
+
+            // Calcula média, variância e desvio padrão dos tempos de execução
+            double media = calcularMedia(tempos);
+            double variancia = calcularVariancia(tempos, media);
+            double desvioPadrao = Math.sqrt(variancia);
+
+            System.out.println("Média: " + media + " ns");
+            System.out.println("Desvio Padrão: " + desvioPadrao + " ns");
+
+            // Filtra os tempos dentro da faixa média ± desvio padrão
+            int count = 0;
+            long somaTemposFiltrados = 0;
+
+            for (long tempo : tempos) {
+                if (tempo >= media - desvioPadrao && tempo <= media + desvioPadrao) {
+                    count++;
+                    somaTemposFiltrados += tempo;
+                }
+            }
+
+            // Calcula o tempo médio dos valores dentro da faixa
+            double tempoMedioFiltrado = (double) somaTemposFiltrados / count;
+            System.out.println("Tempo médio dos valores dentro da faixa: " + tempoMedioFiltrado + " ns");
+
+            System.out.println(); // Linha em branco para separar os resultados de cada algoritmo
+        }
+
+        System.out.println(); // Linha em branco para separar os resultados de cada tipo de array
+    }
+
+    /**
+     * Calcula a média aritmética de um array de tempos.
+     *  tempos Array de tempos
+     *  Média dos tempos
+     */
+    public static double calcularMedia(long[] tempos) {
+        long soma = 0;
+        for (long tempo : tempos) {
+            soma += tempo;
+        }
+        return (double) soma / tempos.length;
+    }
+
+    /**
+     * Calcula a variância de um array de tempos em relação à média.
+     *  tempos Array de tempos
+     * media Média dos tempos
+     *  Variância dos tempos
+     */
+    public static double calcularVariancia(long[] tempos, double media) {
+        double somaDiferencasQuadrado = 0;
+        for (long tempo : tempos) {
+            somaDiferencasQuadrado += Math.pow(tempo - media, 2);
+        }
+        return somaDiferencasQuadrado / tempos.length;
+    }
+
+    /**
+     * Implementação do algoritmo Bubble Sort para ordenação de um array.
+     *  array Array a ser ordenado
+     */
+    public static void bubbleSort(int[] array) {
+        int n = array.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - 1 - i; j++) {
+                if (array[j] > array[j + 1]) {
+                    int temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                }
+            }
+        }
+    }
+
+    /**
+     * Implementação do algoritmo Insertion Sort para ordenação de um array.
+     *  array Array a ser ordenado
+     */
+    public static void insertionSort(int[] array) {
+        int n = array.length;
+        for (int i = 1; i < n; ++i) {
+            int key = array[i];
+            int j = i - 1;
+
+            while (j >= 0 && array[j] > key) {
+                array[j + 1] = array[j];
+                j = j - 1;
+            }
+            array[j + 1] = key;
+        }
+    }
+
+    /**
+     * Implementação do algoritmo Selection Sort para ordenação de um array.
+     *  array Array a ser ordenado
+     */
+    public static void selectionSort(int[] array) {
+        int n = array.length;
+        for (int i = 0; i < n - 1; i++) {
+            int minIdx = i;
+            for (int j = i + 1; j < n; j++) {
+                if (array[j] < array[minIdx]) {
+                    minIdx = j;
+                }
+            }
+            int temp = array[minIdx];
+            array[minIdx] = array[i];
+            array[i] = temp;
+        }
+    }
+
+    /**
+     * Implementação do algoritmo Heap Sort para ordenação de um array.
+     *  array Array a ser ordenado
+     */
+    public static void heapSort(int[] array) {
+        int n = array.length;
+
+        for (int i = n / 2 - 1; i >= 0; i--) {
+            heapify(array, n, i);
+        }
+
+        for (int i = n - 1; i > 0; i--) {
+            int temp = array[0];
+            array[0] = array[i];
+            array[i] = temp;
+
+            heapify(array, i, 0);
+        }
+    }
+
+    /**
+     * Função auxiliar para manter a propriedade do heap durante o heap sort.
+     *  array Array a ser ordenado
+     *  n Tamanho do heap
+     *  i Índice do nó raiz do heap
+     */
+    private static void heapify(int[] array, int n, int i) {
+        int largest = i;
+        int left = 2 * i + 1;
+        int right = 2 * i + 2;
+
+        if (left < n && array[left] > array[largest]) {
+            largest = left;
+        }
+
+        if (right < n && array[right] > array[largest]) {
+            largest = right;
+        }
+
+        if (largest != i) {
+            int swap = array[i];
+            array[i] = array[largest];
+            array[largest] = swap;
+
+            heapify(array, n, largest);
+        }
+    }
+
+    /**
+     * Implementação do algoritmo Shell Sort para ordenação de um array.
+     *  array Array a ser ordenado
+     */
+    public static void shellSort(int[] array) {
+        int n = array.length;
+
+        for (int gap = n / 2; gap > 0; gap /= 2) {
+            for (int i = gap; i < n; i++) {
+                int temp = array[i];
+                int j;
+                for (j = i; j >= gap && array[j - gap] > temp; j -= gap) {
+                    array[j] = array[j - gap];
+                }
+                array[j] = temp;
+            }
+        }
+    }
+
+    /**
+     * Implementação do algoritmo Merge Sort para ordenação de um array.
+     *  array Array a ser ordenado
+     */
+    public static void mergeSort(int[] array) {
+        if (array.length > 1) {
+            int mid = array.length / 2;
+
+            int[] left = Arrays.copyOfRange(array, 0, mid);
+            int[] right = Arrays.copyOfRange(array, mid, array.length);
+
+            mergeSort(left);
+            mergeSort(right);
+
+            merge(array, left, right);
+        }
+    }
+
+    /**
+     * Função auxiliar para mesclar dois arrays ordenados.
+     *  array Array a ser ordenado
+     *  left Array da metade esquerda
+     *  right Array da metade direita
+     */
+    private static void merge(int[] array, int[] left, int[] right) {
+        int i = 0, j = 0, k = 0;
+        while (i < left.length && j < right.length) {
+            if (left[i] <= right[j]) {
+                array[k++] = left[i++];
+            } else {
+                array[k++] = right[j++];
+            }
+        }
+
+        while (i < left.length) {
+            array[k++] = left[i++];
+        }
+
+        while (j < right.length) {
+            array[k++] = right[j++];
+        }
+    }
+
+    /**
+     * Implementação do algoritmo Quick Sort para ordenação de um array.
+     *  array Array a ser ordenado
+     *  low Índice inicial
+     *  high Índice final
+     */
+    public static void quickSort(int[] array, int low, int high) {
+        if (low < high) {
+            int pi = partition(array, low, high);
+
+            quickSort(array, low, pi - 1);
+            quickSort(array, pi + 1, high);
+        }
+    }
+
+    /**
+     * Função auxiliar para particionar o array durante o quick sort.
+     *  array Array a ser ordenado
+     *  low Índice inicial
+     *  high Índice final
+     *  Índice do pivô
+     */
+    private static int partition(int[] array, int low, int high) {
+        int pivot = array[low + (high - low) / 2];
+        int i = low - 1;
+        int j = high + 1;
+        while (true) {
+            do {
+                i++;
+            } while (array[i] < pivot);
+            do {
+                j--;
+            } while (array[j] > pivot);
+            if (i >= j) {
+                return j;
+            }
+            int temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+    }
+
+    /**
+     * Gera um array com elementos em ordem crescente.
+     *  tamanho Tamanho do array a ser gerado
+     *  Array gerado
+     */
+    public static int[] gerarArrayCrescente(int tamanho) {
+        int[] array = new int[tamanho];
+        for (int i = 0; i < tamanho; i++) {
+            array[i] = i + 1;
+        }
+        return array;
+    }
+
+    /**
+     * Gera um array com elementos em ordem decrescente.
+     *  tamanho Tamanho do array a ser gerado
+     *  Array gerado
+     */
+    public static int[] gerarArrayDecrescente(int tamanho) {
+        int[] array = new int[tamanho];
+        for (int i = 0; i < tamanho; i++) {
+            array[i] = tamanho - i;
+        }
+        return array;
+    }
+
+    /**
+     * Gera um array com elementos aleatórios sem repetição.
+     *  tamanho Tamanho do array a ser gerado
+     *  Array gerado
+     */
+    public static int[] gerarArrayAleatorioSemRepetidos(int tamanho) {
+        Integer[] array = new Integer[tamanho];
+        for (int i = 0; i < tamanho; i++) {
+            array[i] = i + 1;
+        }
+        Collections.shuffle(Arrays.asList(array));
+        return Arrays.stream(array).mapToInt(Integer::intValue).toArray();
+    }
+
+    /**
+     * Gera um array com elementos aleatórios com possibilidade de repetição.
+     *  tamanho Tamanho do array a ser gerado
+     *  Array gerado
+     */
+    public static int[] gerarArrayAleatorioComRepetidos(int tamanho) {
+        Random random = new Random();
+        int[] array = new int[tamanho];
+        for (int i = 0; i < tamanho; i++) {
+            array[i] = random.nextInt(tamanho) + 1;
+        }
+        return array;
+    }
+}
