@@ -1,0 +1,147 @@
+Tamanho do Array: 65536
+Tipo do Array: Crescente
+Algoritmo: bubbleSort
+Média: 9.9932265E8 ns
+Desvio Padrão: 6.2187961438517176E7 ns
+Tempo médio dos valores dentro da faixa: 9.793751222222222E8 ns
+
+Algoritmo: insertionSort
+Média: 140040.0 ns
+Desvio Padrão: 2935.7111574540163 ns
+Tempo médio dos valores dentro da faixa: 139255.55555555556 ns
+
+Algoritmo: selectionSort
+Média: 4.28910468E9 ns
+Desvio Padrão: 6459796.959162107 ns
+Tempo médio dos valores dentro da faixa: 4.2901265E9 ns
+
+Algoritmo: heapSort
+Média: 4256980.0 ns
+Desvio Padrão: 25675.27215045636 ns
+Tempo médio dos valores dentro da faixa: 4244150.0 ns
+
+Algoritmo: shellSort
+Média: 1283030.0 ns
+Desvio Padrão: 43687.32195957999 ns
+Tempo médio dos valores dentro da faixa: 1255842.857142857 ns
+
+Algoritmo: mergeSort
+Média: 4008640.0 ns
+Desvio Padrão: 533832.9386615255 ns
+Tempo médio dos valores dentro da faixa: 3847644.4444444445 ns
+
+Algoritmo: quickSort
+Média: 1015140.0 ns
+Desvio Padrão: 5195.228580149289 ns
+Tempo médio dos valores dentro da faixa: 1014416.6666666666 ns
+
+
+Tipo do Array: Decrescente
+Algoritmo: bubbleSort
+Média: 2.52951998E9 ns
+Desvio Padrão: 9901126.154715937 ns
+Tempo médio dos valores dentro da faixa: 2.5275669666666665E9 ns
+
+Algoritmo: insertionSort
+Média: 7.8643108E8 ns
+Desvio Padrão: 1.4581005468677392E7 ns
+Tempo médio dos valores dentro da faixa: 7.823067333333334E8 ns
+
+Algoritmo: selectionSort
+Média: 4.27783763E9 ns
+Desvio Padrão: 1.5374897604605371E7 ns
+Tempo médio dos valores dentro da faixa: 4.272994357142857E9 ns
+
+Algoritmo: heapSort
+Média: 4330260.0 ns
+Desvio Padrão: 60525.76641398273 ns
+Tempo médio dos valores dentro da faixa: 4295800.0 ns
+
+Algoritmo: shellSort
+Média: 1782820.0 ns
+Desvio Padrão: 110313.89577020658 ns
+Tempo médio dos valores dentro da faixa: 1745228.5714285714 ns
+
+Algoritmo: mergeSort
+Média: 4533980.0 ns
+Desvio Padrão: 347486.11137713114 ns
+Tempo médio dos valores dentro da faixa: 4468450.0 ns
+
+Algoritmo: quickSort
+Média: 1047240.0 ns
+Desvio Padrão: 44639.4041178867 ns
+Tempo médio dos valores dentro da faixa: 1026825.0 ns
+
+
+Tipo do Array: Aleatório Sem Repetidos
+Algoritmo: bubbleSort
+Média: 5.8764974E9 ns
+Desvio Padrão: 3.2385253934437506E7 ns
+Tempo médio dos valores dentro da faixa: 5.868898133333333E9 ns
+
+Algoritmo: insertionSort
+Média: 3.8946252E8 ns
+Desvio Padrão: 8123091.710894319 ns
+Tempo médio dos valores dentro da faixa: 3.868517E8 ns
+
+Algoritmo: selectionSort
+Média: 4.27715209E9 ns
+Desvio Padrão: 1.400330023897581E7 ns
+Tempo médio dos valores dentro da faixa: 4.2747837333333335E9 ns
+
+Algoritmo: heapSort
+Média: 6918660.0 ns
+Desvio Padrão: 101710.53239463453 ns
+Tempo médio dos valores dentro da faixa: 6871937.5 ns
+
+Algoritmo: shellSort
+Média: 1.811414E7 ns
+Desvio Padrão: 268633.1483640841 ns
+Tempo médio dos valores dentro da faixa: 1.8002133333333332E7 ns
+
+Algoritmo: mergeSort
+Média: 8972300.0 ns
+Desvio Padrão: 209833.22425202353 ns
+Tempo médio dos valores dentro da faixa: 9060575.0 ns
+
+Algoritmo: quickSort
+Média: 5310500.0 ns
+Desvio Padrão: 164826.69079976095 ns
+Tempo médio dos valores dentro da faixa: 5258722.222222222 ns
+
+
+Tipo do Array: Aleatório Com Repetidos
+Algoritmo: bubbleSort
+Média: 5.89529173E9 ns
+Desvio Padrão: 2.8039942177723903E7 ns
+Tempo médio dos valores dentro da faixa: 5.886490957142858E9 ns
+
+Algoritmo: insertionSort
+Média: 3.9212428E8 ns
+Desvio Padrão: 5355097.599073241 ns
+Tempo médio dos valores dentro da faixa: 3.89605125E8 ns
+
+Algoritmo: selectionSort
+Média: 4.29921206E9 ns
+Desvio Padrão: 5.543596949564786E7 ns
+Tempo médio dos valores dentro da faixa: 4.27190305E9 ns
+
+Algoritmo: heapSort
+Média: 7026630.0 ns
+Desvio Padrão: 209408.3238555717 ns
+Tempo médio dos valores dentro da faixa: 6972222.222222222 ns
+
+Algoritmo: shellSort
+Média: 1.49153E7 ns
+Desvio Padrão: 809483.1264455115 ns
+Tempo médio dos valores dentro da faixa: 1.439862857142857E7 ns
+
+Algoritmo: mergeSort
+Média: 8874460.0 ns
+Desvio Padrão: 471122.9695100845 ns
+Tempo médio dos valores dentro da faixa: 8728433.333333334 ns
+
+Algoritmo: quickSort
+Média: 5190410.0 ns
+Desvio Padrão: 59999.97416666111 ns
+Tempo médio dos valores dentro da faixa: 5210316.666666667 ns
