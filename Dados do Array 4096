@@ -1,0 +1,147 @@
+Tamanho do Array: 4096
+Tipo do Array: Crescente
+Algoritmo: bubbleSort
+Média: 3824900.0 ns
+Desvio Padrão: 293415.1870643372 ns
+Tempo médio dos valores dentro da faixa: 3740688.888888889 ns
+
+Algoritmo: insertionSort
+Média: 8780.0 ns
+Desvio Padrão: 244.13111231467406 ns
+Tempo médio dos valores dentro da faixa: 8700.0 ns
+
+Algoritmo: selectionSort
+Média: 1.655101E7 ns
+Desvio Padrão: 125286.19596747281 ns
+Tempo médio dos valores dentro da faixa: 1.64900625E7 ns
+
+Algoritmo: heapSort
+Média: 226180.0 ns
+Desvio Padrão: 3317.46891469988 ns
+Tempo médio dos valores dentro da faixa: 225887.5 ns
+
+Algoritmo: shellSort
+Média: 57800.0 ns
+Desvio Padrão: 1759.5453958338217 ns
+Tempo médio dos valores dentro da faixa: 56962.5 ns
+
+Algoritmo: mergeSort
+Média: 234420.0 ns
+Desvio Padrão: 59634.114397717014 ns
+Tempo médio dos valores dentro da faixa: 215011.11111111112 ns
+
+Algoritmo: quickSort
+Média: 50960.0 ns
+Desvio Padrão: 6652.097413598211 ns
+Tempo médio dos valores dentro da faixa: 47725.0 ns
+
+
+Tipo do Array: Decrescente
+Algoritmo: bubbleSort
+Média: 9821840.0 ns
+Desvio Padrão: 84268.01528456689 ns
+Tempo médio dos valores dentro da faixa: 9853750.0 ns
+
+Algoritmo: insertionSort
+Média: 3031240.0 ns
+Desvio Padrão: 35302.66845438175 ns
+Tempo médio dos valores dentro da faixa: 3014850.0 ns
+
+Algoritmo: selectionSort
+Média: 1.654244E7 ns
+Desvio Padrão: 59668.08527177657 ns
+Tempo médio dos valores dentro da faixa: 1.65335625E7 ns
+
+Algoritmo: heapSort
+Média: 228780.0 ns
+Desvio Padrão: 3953.4288914814188 ns
+Tempo médio dos valores dentro da faixa: 227414.2857142857 ns
+
+Algoritmo: shellSort
+Média: 80650.0 ns
+Desvio Padrão: 3202.889320597888 ns
+Tempo médio dos valores dentro da faixa: 79912.5 ns
+
+Algoritmo: mergeSort
+Média: 312400.0 ns
+Desvio Padrão: 40924.51587984884 ns
+Tempo médio dos valores dentro da faixa: 329937.5 ns
+
+Algoritmo: quickSort
+Média: 48590.0 ns
+Desvio Padrão: 1418.7670703818862 ns
+Tempo médio dos valores dentro da faixa: 48383.333333333336 ns
+
+
+Tipo do Array: Aleatório Sem Repetidos
+Algoritmo: bubbleSort
+Média: 1.580386E7 ns
+Desvio Padrão: 1538937.130099862 ns
+Tempo médio dos valores dentro da faixa: 1.4817214285714285E7 ns
+
+Algoritmo: insertionSort
+Média: 1619700.0 ns
+Desvio Padrão: 47076.53343227388 ns
+Tempo médio dos valores dentro da faixa: 1606357.142857143 ns
+
+Algoritmo: selectionSort
+Média: 1.662093E7 ns
+Desvio Padrão: 184462.47884054904 ns
+Tempo médio dos valores dentro da faixa: 1.6566388888888888E7 ns
+
+Algoritmo: heapSort
+Média: 322940.0 ns
+Desvio Padrão: 8321.802689321587 ns
+Tempo médio dos valores dentro da faixa: 320200.0 ns
+
+Algoritmo: shellSort
+Média: 444050.0 ns
+Desvio Padrão: 13053.984066176885 ns
+Tempo médio dos valores dentro da faixa: 438212.5 ns
+
+Algoritmo: mergeSort
+Média: 592220.0 ns
+Desvio Padrão: 47903.043744630675 ns
+Tempo médio dos valores dentro da faixa: 562485.7142857143 ns
+
+Algoritmo: quickSort
+Média: 277000.0 ns
+Desvio Padrão: 55700.933564887404 ns
+Tempo médio dos valores dentro da faixa: 259033.33333333334 ns
+
+
+Tipo do Array: Aleatório Com Repetidos
+Algoritmo: bubbleSort
+Média: 1.600386E7 ns
+Desvio Padrão: 1074262.925172418 ns
+Tempo médio dos valores dentro da faixa: 1.630602857142857E7 ns
+
+Algoritmo: insertionSort
+Média: 1564480.0 ns
+Desvio Padrão: 47035.0252471496 ns
+Tempo médio dos valores dentro da faixa: 1550111.111111111 ns
+
+Algoritmo: selectionSort
+Média: 1.656926E7 ns
+Desvio Padrão: 108876.65681862205 ns
+Tempo médio dos valores dentro da faixa: 1.64998E7 ns
+
+Algoritmo: heapSort
+Média: 327710.0 ns
+Desvio Padrão: 17573.86980718817 ns
+Tempo médio dos valores dentro da faixa: 321933.3333333333 ns
+
+Algoritmo: shellSort
+Média: 435530.0 ns
+Desvio Padrão: 41154.442044571566 ns
+Tempo médio dos valores dentro da faixa: 415737.5 ns
+
+Algoritmo: mergeSort
+Média: 589710.0 ns
+Desvio Padrão: 399110.1363032515 ns
+Tempo médio dos valores dentro da faixa: 457522.22222222225 ns
+
+Algoritmo: quickSort
+Média: 247710.0 ns
+Desvio Padrão: 8046.54584278248 ns
+Tempo médio dos valores dentro da faixa: 245111.11111111112 ns
