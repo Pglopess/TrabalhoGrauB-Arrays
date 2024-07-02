@@ -1,0 +1,147 @@
+Tamanho do Array: 512
+Tipo do Array: Crescente
+Algoritmo: bubbleSort
+Média: 152020.0 ns
+Desvio Padrão: 242755.13506412177 ns
+Tempo médio dos valores dentro da faixa: 71277.77777777778 ns
+
+Algoritmo: insertionSort
+Média: 2370.0 ns
+Desvio Padrão: 3515.977815629672 ns
+Tempo médio dos valores dentro da faixa: 1200.0 ns
+
+Algoritmo: selectionSort
+Média: 343650.0 ns
+Desvio Padrão: 119258.42737517547 ns
+Tempo médio dos valores dentro da faixa: 294825.0 ns
+
+Algoritmo: heapSort
+Média: 41770.0 ns
+Desvio Padrão: 19276.4130480751 ns
+Tempo médio dos valores dentro da faixa: 35355.555555555555 ns
+
+Algoritmo: shellSort
+Média: 10020.0 ns
+Desvio Padrão: 13695.824181114476 ns
+Tempo médio dos valores dentro da faixa: 5455.555555555556 ns
+
+Algoritmo: mergeSort
+Média: 50270.0 ns
+Desvio Padrão: 23426.568250599576 ns
+Tempo médio dos valores dentro da faixa: 39187.5 ns
+
+Algoritmo: quickSort
+Média: 8250.0 ns
+Desvio Padrão: 6031.459193263268 ns
+Tempo médio dos valores dentro da faixa: 5412.5 ns
+
+
+Tipo do Array: Decrescente
+Algoritmo: bubbleSort
+Média: 166720.0 ns
+Desvio Padrão: 27195.02895751354 ns
+Tempo médio dos valores dentro da faixa: 155737.5 ns
+
+Algoritmo: insertionSort
+Média: 65000.0 ns
+Desvio Padrão: 20878.457797452378 ns
+Tempo médio dos valores dentro da faixa: 54925.0 ns
+
+Algoritmo: selectionSort
+Média: 361600.0 ns
+Desvio Padrão: 280896.82803477865 ns
+Tempo médio dos valores dentro da faixa: 269877.77777777775 ns
+
+Algoritmo: heapSort
+Média: 82370.0 ns
+Desvio Padrão: 98658.80649997748 ns
+Tempo médio dos valores dentro da faixa: 49977.77777777778 ns
+
+Algoritmo: shellSort
+Média: 7380.0 ns
+Desvio Padrão: 368.23905279043936 ns
+Tempo médio dos valores dentro da faixa: 7266.666666666667 ns
+
+Algoritmo: mergeSort
+Média: 56470.0 ns
+Desvio Padrão: 26297.112008735865 ns
+Tempo médio dos valores dentro da faixa: 43862.5 ns
+
+Algoritmo: quickSort
+Média: 29280.0 ns
+Desvio Padrão: 69373.16195763316 ns
+Tempo médio dos valores dentro da faixa: 6166.666666666667 ns
+
+
+Tipo do Array: Aleatório Sem Repetidos
+Algoritmo: bubbleSort
+Média: 294210.0 ns
+Desvio Padrão: 43655.777395437595 ns
+Tempo médio dos valores dentro da faixa: 266442.85714285716 ns
+
+Algoritmo: insertionSort
+Média: 35450.0 ns
+Desvio Padrão: 17168.706998490015 ns
+Tempo médio dos valores dentro da faixa: 29888.88888888889 ns
+
+Algoritmo: selectionSort
+Média: 263780.0 ns
+Desvio Padrão: 26766.015766266 ns
+Tempo médio dos valores dentro da faixa: 255044.44444444444 ns
+
+Algoritmo: heapSort
+Média: 32970.0 ns
+Desvio Padrão: 6584.079282633222 ns
+Tempo médio dos valores dentro da faixa: 31044.444444444445 ns
+
+Algoritmo: shellSort
+Média: 30960.0 ns
+Desvio Padrão: 6327.116246758866 ns
+Tempo médio dos valores dentro da faixa: 28911.11111111111 ns
+
+Algoritmo: mergeSort
+Média: 129120.0 ns
+Desvio Padrão: 138853.13680288248 ns
+Tempo médio dos valores dentro da faixa: 61450.0 ns
+
+Algoritmo: quickSort
+Média: 14180.0 ns
+Desvio Padrão: 5602.285248003711 ns
+Tempo médio dos valores dentro da faixa: 12200.0 ns
+
+
+Tipo do Array: Aleatório Com Repetidos
+Algoritmo: bubbleSort
+Média: 259070.0 ns
+Desvio Padrão: 11251.58211097444 ns
+Tempo médio dos valores dentro da faixa: 256750.0 ns
+
+Algoritmo: insertionSort
+Média: 28070.0 ns
+Desvio Padrão: 4130.871578734928 ns
+Tempo médio dos valores dentro da faixa: 26075.0 ns
+
+Algoritmo: selectionSort
+Média: 305000.0 ns
+Desvio Padrão: 48548.09985982974 ns
+Tempo médio dos valores dentro da faixa: 306720.0 ns
+
+Algoritmo: heapSort
+Média: 39490.0 ns
+Desvio Padrão: 22685.565895520438 ns
+Tempo médio dos valores dentro da faixa: 32188.88888888889 ns
+
+Algoritmo: shellSort
+Média: 33350.0 ns
+Desvio Padrão: 14068.422086360644 ns
+Tempo médio dos valores dentro da faixa: 28833.333333333332 ns
+
+Algoritmo: mergeSort
+Média: 64900.0 ns
+Desvio Padrão: 34466.96969563759 ns
+Tempo médio dos valores dentro da faixa: 54577.77777777778 ns
+
+Algoritmo: quickSort
+Média: 19710.0 ns
+Desvio Padrão: 16000.903099512852 ns
+Tempo médio dos valores dentro da faixa: 14677.777777777777 ns
